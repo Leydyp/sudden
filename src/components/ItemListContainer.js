@@ -13,7 +13,7 @@ const Saludo = ({name, aling, children}) => {
 export default function App (){
     return (
         <div className='App'>
-        <Saludo aling= 'center'color='black'name='Leydy'/>    
+        <Saludo aling= 'center'color='black'name='Lady'/>    
         </div>
     );
 };

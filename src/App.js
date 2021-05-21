@@ -3,16 +3,19 @@ import React, {Component} from 'react';
 import Navbar from "./components/Navbar";
 import './App.css';
 import Saludo from './components/ItemListContainer';
+import  './style.css';
+import Card from './components/ItemCount';
 
-function App() {
+export default function root() {
   return (
-    <div className="App">
+    <div className="root">
       <Navbar/>
       <Saludo/>
+      <Card/>
+
     </div>
   );
 }
 
-export default App;
 
 
