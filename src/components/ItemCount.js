@@ -1,51 +1,60 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Card from "@material-ui/core/Card";
 import { makeStyles } from "@material-ui/core/styles";
 import CardContent from "@material-ui/core/CardContent";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { CardActions, CardMedia } from "@material-ui/core";
-import { Autorenew, CenterFocusStrong, Height } from "@material-ui/icons";
+import { Height } from "@material-ui/icons";
 
-export default function App() {
-  const useStyles = makeStyles({
-    root: {
-      width: 275,
-      media: Height,
-      margin: 'auto', 
-    },
-    bullet: {
-      display: "inline",
-      marginLeft: "auto",
-      transform: "scale(0.8)",
-    },
-    title: {
-      fontSize: 14,
-    },
-    pos: {
-      marginBottom: 12,
-    },
-    media: {
-        height:0,
-        paddingTop:'56%',
+ export  const ProductContainer = ({initial, stock})=>{
+    const [error, setError] = useState ('');
+
+  const [stockRequired, setStockRequired] = useState ("initial");
+  const onAdd = () => {
+    if (stock >= setStockRequired +1 ){
+      setStockRequired (stockRequired +1 );
+      setError ("");
+    }else {
+      setError('no hay mas stock');
     }
-  });
+  }
 
-  const classes = useStyles();
-  const bull = <span className={classes.bullet}></span>;
-
-  const [stock, setStock] = useState(1);
+    const useStyles = makeStyles({
+      root: {
+        width: 275,
+        media: Height,
+        margin: 'auto', 
+      },
+      bullet: {
+        display: "inline",
+        marginLeft: "auto",
+        transform: "scale(0.8)",
+      },
+      title: {
+        fontSize: 14,
+      },
+      pos: {
+        marginBottom: 12,
+      },
+      media: {
+          height:0,
+          paddingTop:'56%',
+      }
+    });
   
+  const classes = useStyles();
+  
+  //Contador que me sirve para sumar y restar
+  const [counter, setCounter] = useState(initial);
+ 
+  //Cambio del contador
 
   const changeCounter = (value) => {
-    if (stock + value > -1) {
-      setStock(stock + value);
-    }
+        if (counter + value > -1) {
+      setCounter(counter + value);
+        }
   };
-
-  useEffect(() => {
-    return () => {};
-  }, [stock]);
 
   return (
     <>
@@ -63,25 +72,26 @@ export default function App() {
           >
             Muffin Frambuesa
           </Typography>
-          Cantidad productos: {stock} <br />
+          Cantidad productos: {counter} <br /> {error}
         </CardContent>
         <CardActions>
           <Button
             variant="contained"
             size="small"
-            onClick={() => changeCounter(1)}
-          >
+            onClick={() => changeCounter(+1)}
+          >{onAdd}
             Agregar productos
           </Button>
           <Button
             variant="contained"
             size="small"
             onClick={() => changeCounter(-1)}
-          >
+          >{onAdd}
             Eliminar productos
           </Button>
         </CardActions>
       </Card>
     </>
   );
-}
+
+  }
