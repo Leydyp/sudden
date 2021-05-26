@@ -1,8 +1,10 @@
+ import React from 'react'
+
 export const listProduct = [
 
     {
         id: 1,
-        tittle: "Wafle con frutos rojos",
+        title: "Wafle con frutos rojos",
         description: "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus sem eget mattis porta.",
         price: 200,
         img: './img/wafles-frutos.jpg',
@@ -11,7 +13,7 @@ export const listProduct = [
 
   {
         id: 2,
-        tittle: "Wafle con dulce de leche",
+        title: "Wafle con dulce de leche",
         description: "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus sem eget mattis porta.",
         price: 350,
         img: './img/wafles.jpg',
@@ -19,7 +21,7 @@ export const listProduct = [
     },
     {
         id: 3,
-        tittle: "Sweet",
+        title: "Sweet",
         description: "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus sem eget mattis porta.",
         price: 180,
         img: './img/sweet.jpg',
@@ -27,7 +29,7 @@ export const listProduct = [
     },  
     {
         id: 4,
-        tittle: "Macarrons",
+        title: "Macarrons",
         description: "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus sem eget mattis porta.",
         price: 150,
         img: './img/macarrons.jpg',
@@ -35,10 +37,23 @@ export const listProduct = [
     },
     {
         id: 5,
-        tittle: "Apple Crumble",
+        title: "Apple Crumble",
         description: "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus sem eget mattis porta.",
         price: 380,
         img: './img/torta-manzana.jpg',
-    },
-]
+    }
+];
+
+
+const producto = new Promise ((resolve, reject) =>{
+  setTimeout (function(){
+    resolve(listProduct);
+  },2000);
+ });
+ producto.
+ then (
+  function (value){
+    console.log(value);
+  }
+ );
 

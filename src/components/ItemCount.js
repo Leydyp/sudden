@@ -6,8 +6,9 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { CardActions, CardMedia } from "@material-ui/core";
 import { Height } from "@material-ui/icons";
+import {listProduct} from './Productos/ListProduct';
 
- export  const ProductContainer = ({initial, stock})=>{
+ export  const ProductContainer = ({initial, stock, image, title, children})=>{
     const [error, setError] = useState ('');
 
   const [stockRequired, setStockRequired] = useState ("initial");
@@ -44,7 +45,6 @@ import { Height } from "@material-ui/icons";
     });
   
   const classes = useStyles();
-  
   //Contador que me sirve para sumar y restar
   const [counter, setCounter] = useState(initial);
  
@@ -56,6 +56,8 @@ import { Height } from "@material-ui/icons";
         }
   };
 
+
+  
   return (
     <>
       <Card className={classes.root} variant="outlined">
@@ -64,7 +66,7 @@ import { Height } from "@material-ui/icons";
         title="muffin" />
         <CardContent>
           <Typography
-            className={classes.root}
+            className={classes.root} 
             color="textSecondary"
             variant="h5"
             component="h2"
@@ -80,14 +82,14 @@ import { Height } from "@material-ui/icons";
             size="small"
             onClick={() => changeCounter(+1)}
           >{onAdd}
-            Agregar productos
+           +
           </Button>
           <Button
             variant="contained"
             size="small"
             onClick={() => changeCounter(-1)}
           >{onAdd}
-            Eliminar productos
+           -
           </Button>
         </CardActions>
       </Card>
