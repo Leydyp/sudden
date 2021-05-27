@@ -11,6 +11,7 @@ export default function root() {
       <Navbar/>
       <Saludo/>
     
+    
     </div>
   );
 }
