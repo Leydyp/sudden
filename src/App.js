@@ -2,19 +2,24 @@
 import React from 'react';
 import Navbar from "./components/Navbar";
 import './App.css';
-import Saludo from './components/ItemListContainer';
 import  './style.css';
+import Contenedor from './components/ItemListContainer';
 
-export default function root() {
+
+
+function App() {
   return (
-    <div className="root">
+    <div className="App">
+      
       <Navbar/>
-      <Saludo/>
-    
-    
+      <Contenedor/>
+     
+      
     </div>
   );
 }
+
+export default App;
 
 
 
