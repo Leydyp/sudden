@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { useState} from "react";
+import productsData from "./productsData";
+import { Link } from "react-router-dom";
 
 
 const Card = ({image,children, title, initial, stock }) => {
@@ -31,7 +33,9 @@ const Card = ({image,children, title, initial, stock }) => {
 
 
     <Container>
-<img src={image} alt={title} />
+    
+      
+    <img src={image} alt={title} /> 
       
 
       <Info>
@@ -50,18 +54,18 @@ const Card = ({image,children, title, initial, stock }) => {
         </Button>
       </Info>
     </Container>
+    
     </>
   );
 };
 export default Card;
 
 const Container = styled.div`
-
+position:relative;
 padding:0px;
 width: 100%;
 max-width: 250px;
 overflow: hidden;
-position: relative;
 text-align: center;
 border-radius: 1.5rem;
 margin: 100px  auto;
