@@ -5,11 +5,12 @@ import "./Cartwidget";
 import Cartwidget from "./Cartwidget";
 
 
+
 class Navbar extends Component {
   render() {
     return (
       <nav className="NavbarItems">
-        <h1 ><img src="logo.png" className="navbar-logo"alt="logo"/></h1>
+        <h1 ><img src='./logo.png' className="navbar-logo"alt="logo"/></h1>
         <ul className="nav-menu">
           {MenuItems.map((item, index) => {
             return (

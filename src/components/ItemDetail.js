@@ -1,24 +1,27 @@
 import React from "react"
 import {useParams} from "react-router-dom"
-import productsData from "./productsData"
+import product_card from "./Product_data"
 import styled from "styled-components";
+import Card from "./Item";
 
 
 function ItemDetail() {
     const {productId} = useParams()
-    const thisProduct = productsData.find(prod => prod.id === productId)
+    const thisProduct = product_card.find(prod => prod.id === productId)
     
-    return (
-
-        
+    return (        
+<>
+<h1>Detalle producto</h1>
         <CardContainer>
-        
-        <img src={thisProduct.image} alt={thisProduct.name}/>
-            <h1>{thisProduct.name}</h1>
+        <Card>
+            <img src={thisProduct.image} alt={thisProduct.title}/>
+            
+            <h1>{thisProduct.title}</h1>
             <p>Precio: ${thisProduct.price}</p>
             <p>{thisProduct.description}</p>
-            
+            </Card>
         </CardContainer>
+        </>
     )
 }
 

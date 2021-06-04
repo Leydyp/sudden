@@ -1,28 +1,39 @@
-import React from "react";
-import productsData from "./productsData";
-import { Link } from "react-router-dom";
+import React, {useState, useEffect}from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Card from './Item';
+import product_card from './Product_data';
 
 const Products = () => {
-  const products = productsData.map(product => {
+  const [producto, setProducto] = useState([]);
+
+  const obtenerProductos = async () => {
+    setTimeout(() => {
+      const datosProductos = product_card;
+      setProducto(datosProductos);
+    }, 2000);
+  };
+
+  useEffect(function () {
+    obtenerProductos();
+  }, []);
+
+  const products = product_card?.map(product => {
     return (
-
+      <>
         <CardContainer>
-           
-      <div key={product.id}>
-          <Card>
+          {producto?.map((item) => (
+            <Card Key={item} >
+            
+              <img src={item.image} alt={item.title}/>
+              <NavLink to={`/products/${item.id}`}>{item.title}</NavLink>
 
-      <img src={product.image} alt={product.name} />  
-        <h3>
-          <Link to={`/products/${product.id}`}>{product.name}</Link>
-        </h3>
-        <p>Precio: ${product.price}</p>
-       </Card>
-      </div>
-     
-      </CardContainer>
-      
+              <h4>${item.price}</h4>
+              
+            </Card>
+          ))}
+        </CardContainer>
+      </>
     );
   });
 
