@@ -57,7 +57,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 
 Gif Primera entrega proyecto final 
-https://user-images.githubusercontent.com/36831720/121083887-59d46880-c7b6-11eb-8319-85e210cf76d3.mov
+![Entrega](https://user-images.githubusercontent.com/36831720/121116155-7a1f1a00-c7ec-11eb-8503-df3372214790.gif)
+
 
 
 
