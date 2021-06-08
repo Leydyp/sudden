@@ -4,13 +4,6 @@ import sweet from '../img/sweet.jpg';
 import macarrons from '../img/macarrons.jpg';
 
 
-
-
-
-
-
-
-
 const product_card = [
     {
       id: "1",

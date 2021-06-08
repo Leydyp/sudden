@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { MenuItems } from "./Menu";
 import "./Navbar.css";
 import "./Cartwidget";
 import Cartwidget from "./Cartwidget";
-
+import {NavLink }from 'react-router-dom';
 
 
 class Navbar extends Component {
@@ -12,16 +11,11 @@ class Navbar extends Component {
       <nav className="NavbarItems">
         <h1 ><img src='./logo.png' className="navbar-logo"alt="logo"/></h1>
         <ul className="nav-menu">
-          {MenuItems.map((item, index) => {
-            return (
-              <li key={index}>
-                <a className={item.cName} href={item.url}>
-                  {item.titulo}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        <li><NavLink className="nav-links" to={'/'}>Inicio</NavLink></li>
+        <li><NavLink className="nav-links"to={"/products"}>Productos</NavLink></li>
+        <li><NavLink className="nav-links"to={"/nosotros"}>Nosotros</NavLink></li>
+        <li><NavLink className="nav-links"to={"/contacto"}>Contacto</NavLink></li>
+          </ul>
         <Cartwidget/>
       </nav>
       

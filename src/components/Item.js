@@ -83,7 +83,6 @@ img {
 `;
 
 
-
 const Info = styled.div`
   padding: 15px;
 
