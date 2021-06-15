@@ -2,12 +2,13 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import "./style.css";
-import Contenedor from "./components/ItemListContainer";
 import ItemDetail from "./components/ItemDetail";
 import Products from "./components/ItemDetailContainer.js";
 import { Link, Route, Switch } from "react-router-dom";
 import Nosotros from "./Nosotros";
 import Contacto from "./Contacto";
+import Home from "./Home";
+import Carrito from "./Carrito.js";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
       <Navbar />
       <Switch>
         <Route exact path="/">
-          <Contenedor />
+          <Home />
         </Route>
         <Route exact path="/products">
           <Products/>
@@ -29,6 +30,7 @@ function App() {
         <Route exact path="/contacto">
         <Contacto/>
         </Route>
+        <Carrito/>
       </Switch>
     </div>
   );

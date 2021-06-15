@@ -54,6 +54,36 @@ const ItemList = ({}) => {
 
   return (
     <>
+
+<div className="cards-list">
+
+        {producto?.map((item) => (
+          <Card Key={item} >
+            <a>
+            <img src={item.image} alt={item.title}/>
+            <h2>{item.title} </h2>
+            <h4>${item.price}</h4>
+            </a>
+          </Card>
+        ))}
+      
+  <div className="card1">
+    <div className="card_image"></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
       <CardContainer>
         {producto?.map((item) => (
           <Card Key={item} >

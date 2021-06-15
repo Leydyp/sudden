@@ -8,8 +8,7 @@ const product_card = [
     {
       id: "1",
       title: "Wafle con frutos",
-      description:
-        "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus sem eget mattis porta.",
+      description:"Everyone's favorite cat who loves to hate,Everyone's favorite cat who loves to hate",
       price: 200,
       image: wafle,
     },
@@ -18,7 +17,7 @@ const product_card = [
       id: "2",
       title: "Wafle con dulce de leche",
       description:
-        "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus sem eget mattis porta.",
+      "He bends! He stretches! He even ties in knots, but always returns to his original shape!",
       price: 350,
       image: brownie,
     },
@@ -26,7 +25,7 @@ const product_card = [
       id: "3",
       title: "Sweet",
       description:
-        "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus sem eget mattis porta.",
+      "It's a race, it's a chase, hurry up and feed their face! Who will win? No one knows! Feed the hungry hip-ip-pos!",
       price: 180,
       image: sweet,
     },
@@ -34,7 +33,7 @@ const product_card = [
       id: "4",
       title: "Macarrons",
       description:
-        "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus sem eget mattis porta.",
+      "You'll get caught up in the crossfire!",
       price: 150,
       image: macarrons,
     }

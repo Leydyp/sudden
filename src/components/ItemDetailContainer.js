@@ -29,7 +29,7 @@ const Products = () => {
               <img src={item.image} alt={item.title}/>
               <NavLink to={`/products/${item.id}`}>{item.title}</NavLink>
 
-              <h4>${item.price}</h4>
+            
               
             </Card>
           ))}
@@ -52,10 +52,9 @@ const CardContainer = styled.div`
   z-index:0;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   width:100%;
   justify-content: space-around;
-  aling-items: center;
+ 
   
 `;
 

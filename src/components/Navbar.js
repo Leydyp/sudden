@@ -9,7 +9,7 @@ class Navbar extends Component {
   render() {
     return (
       <nav className="NavbarItems">
-        <h1 ><img src='./logo.png' className="navbar-logo"alt="logo"/></h1>
+        <h1 ><img src='/logo.png' className="navbar-logo"alt="logo"/></h1>
         <ul className="nav-menu">
         <li><NavLink className="nav-links" to={'/'}>Inicio</NavLink></li>
         <li><NavLink className="nav-links"to={"/products"}>Productos</NavLink></li>

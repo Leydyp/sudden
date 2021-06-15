@@ -22,8 +22,7 @@ const Card = ({image,children, title, initial, stock }) => {
     }
   };
 
- 
-  
+
   const changeCounter = (value) => {
     if (counter + value > -1) {
       setCounter(counter + value);
@@ -42,16 +41,6 @@ const Card = ({image,children, title, initial, stock }) => {
         
         <div>{title}</div>
         <h4>{children}</h4>
-
-        <p>
-          Cantidad: {counter} <br /> {error}
-        </p>
-        <Button type="button" onClick={() => changeCounter(1)}>
-          +{onAdd}
-        </Button>
-        <Button type="button" onClick={() => changeCounter(-1)}>
-          -{onAdd}
-        </Button>
       </Info>
     </Container>
     
